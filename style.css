@@ -1,23 +1,23 @@
   /* Add a black background color to the top navigation */
 .topnav {
-    background-color: darkgrey;
+    background-color:lightblue;
     overflow: hidden;
   }
   
   /* Style the links inside the navigation bar */
   .topnav a {
     float: left;
-    color: #f2f2f2;
-    text-align: center;
+    color: black;
+    text-align: right;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 18px;
   }
   
   /* Change the color of links on hover */
   .topnav a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: gray;
+    color: white;
   }
   
   /* Add a color to the active/current link */
@@ -25,3 +25,22 @@
     background-color: black;
     color: white;
   }
+
+  body{
+    background-image: url(https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-031.jpg);
+  }
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+p{
+  font-size: 150%;
+  padding: 2%;
+}
+div{
+  border-style: solid;
+  
+  
+}
