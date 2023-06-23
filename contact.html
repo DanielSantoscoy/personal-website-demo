@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    
+</head>
+<body>
+  <h1>Contact</h1>
+  <div class="grid-container">
+    <div class="item1">Number:
+      <p>999-999-999</p>
+    </div>
+    <div class="item2">Email:
+      <p>example@gmail.com</p>
+    </div>
+    <div class="item3">Github:
+      <a href="https://github.com/DanielSantoscoy">https://github.com/DanielSantoscoy</a>
+    </div>  
+    <div class="item4">Instagram:
+      <a href="https://www.instagram.com/">@RandomUser</a>
+      
+    </div>
+    <form action="action_page.php">
+
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+  
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+  
+      <label for="country">Country</label>
+      <select id="country" name="country">
+        <option value="australia">Australia</option>
+        <option value="canada">Canada</option>
+        <option value="usa">USA</option>
+      </select>
+  
+      <label for="subject">Comments</label>
+      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+  
+      <input type="submit" value="Submit">
+  </div>  
+  <script> const form = document.querySelector("#form")
+    const submitButton = document.querySelector("#submit")
+    const scriptURL = 'https://script.google.com/macros/s/1XTaVdkdAnzhAHoLOA-x0K4svtJOB9RUnp2OgudFCNoEE4Lo8muDKOgSO/exec'
+ 
+    form.addEventListener('submit', e => {
+      submitButton.disabled = true
+      e.preventDefault()
+      let requestBody = new FormData(form)
+      fetch(scriptURL, { method: 'POST', body: requestBody})
+        .then(response => {
+           alert('Success!', response)
+           submitButton.disabled = false
+          })
+        .catch(error => {
+        alert('Error!', error.message)
+          submitButton.disabled = false
+ 
+        }
+        )
+    })</script>
+  <script src="javascript.js"></script>
+</body>
+</html>
